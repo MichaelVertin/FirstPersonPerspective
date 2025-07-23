@@ -41,11 +41,11 @@ public class SpawnArea : MonoBehaviour
         yield return new WaitForEndOfFrame();
         while (true)
         {
+            yield return new WaitForSeconds(spawnDelay);
             if(Zombies.Count < maxSpawns)
             {
                 SpawnZombie();
             }
-            yield return new WaitForSeconds(spawnDelay);
         }
     }
 
